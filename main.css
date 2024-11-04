@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  --role-color: #1c7d32;
+  --text-color: #dee2e6;
+  --background-color: #010e1b;
+}
+
+body {
+  width: 700dvw;
+  height: 100dvh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section {
+  width: 100dvw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+main section.home .container a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 48px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+main section.home .container h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main section.home .container h2>span {
+  color: var(--role-color);
+  width: 0%;
+}
+
+main section.home .container nav {
+  margin: 30px 0px;
+}
+
+main section.home .container nav a {
+  font-size: 19px;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  margin-right: 30px;
+}
+
+main section.home .container nav a:hover{
+  color: var(--role-color);
+}
+
+main section.home .container nav a.active {
+  color: var(--role-color);
+  border-bottom: 2px solid yellow;
+}
+
+main section.home .container .connect svg {
+  background-color: #312f2f;
+  padding: 10px;
+  border-radius: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+main section.home .container .connect svg:hover{
+  background-color: var(--role-color);
+}
+
+main section.home .container button.downloadbtn{
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+  background-color: rgb(12, 89, 120);
+  border-radius: 10px;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forward-backward{
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forward-backward a{
+  cursor: pointer;
+  padding: 5px;
+  user-select: none;
+}
