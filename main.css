@@ -10,7 +10,7 @@
 }
 
 body {
-  width: 700dvw;
+  width: 600dvw;
   height: 100dvh;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -36,7 +36,7 @@ main section {
   position: relative;
 }
 
-main section .container{
+main section .container {
   width: 50dvw;
 }
 
@@ -71,7 +71,7 @@ main section.home .container nav a {
   margin-right: 30px;
 }
 
-main section.home .container nav a:hover{
+main section.home .container nav a:hover {
   color: var(--role-color);
 }
 
@@ -89,11 +89,11 @@ main section.home .container .connect svg {
   user-select: none;
 }
 
-main section.home .container .connect svg:hover{
+main section.home .container .connect svg:hover {
   background-color: var(--role-color);
 }
 
-main section.home .container button.downloadbtn{
+main section.home .container button.downloadbtn {
   font-size: 16px;
   font-weight: bold;
   padding: 10px;
@@ -108,7 +108,7 @@ main section.home .container button.downloadbtn{
   gap: 5px;
 }
 
-.forward-backward{
+.forward-backward {
   position: absolute;
   right: 15px;
   bottom: 20px;
@@ -117,17 +117,17 @@ main section.home .container button.downloadbtn{
   justify-content: center;
 }
 
-.forward-backward a{
+.forward-backward a {
   cursor: pointer;
   padding: 5px;
   user-select: none;
 }
 
-.about .container{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.about .container {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.about .container h1{
+.about .container h1 {
   color: var(--role-color);
   font-size: 30px;
   margin-bottom: 10px;
@@ -135,60 +135,71 @@ main section.home .container button.downloadbtn{
   padding: 10px;
 }
 
-.about .container p{
-  margin-top: 20px;
+.about .container p {
   font-family: "Poppins", sans-serif;
+  margin-top: 20px;
 }
 
-.education .container .degree,.projects .container .project{
+.education .container .degree,
+.projects .container .project {
   margin: 20px;
   padding: 10px;
 }
 
-.education .container .degree h1,.projects .container .project h1{
+.education .container .degree h1,
+.projects .container .project h1,
+.skills .container h3 {
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--role-color);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-bottom: 2px solid yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.education .container .degree h1 > span{
+.education .container .degree h1>span {
   color: yellowgreen;
 }
 
-.education .container .degree a{
+.education .container .degree a {
   text-decoration: none;
   color: rgb(201, 186, 166);
   display: block;
   padding: 10px;
 }
 
-.education .container .degree span,.education .container .degree p,.projects .container .project p{
+.education .container .degree span,
+.education .container .degree p,
+.projects .container .project p {
   color: #d6c1c1;
   padding: 10px;
   font-weight: bolder;
 }
 
-.education .container .degree:hover,.projects .container .project:hover{
+.education .container .degree:hover,
+.projects .container .project:hover {
   transform: scale(1.03);
 }
-.projects .container .project ul
-{
+
+.projects .container .project ul,
+.skills .container ul {
   padding: 10px;
   list-style-type: none;
   display: flex;
   gap: 10px;
 }
-.projects .container .project ul li{
+
+.projects .container .project ul li,
+.skills .container ul li {
   background-color: #312f2f;
-  padding: 5px;
+  padding: 8px;
   display: flex;
   align-items: center;
   gap: 10px;
   border-radius: 5px;
   cursor: pointer;
+  text-wrap: nowrap;
 }
-.projects .container .project a{
+
+.projects .container .project a {
   padding: 10px;
   text-decoration: none;
   color: var(--text-color);
@@ -196,8 +207,207 @@ main section.home .container button.downloadbtn{
   align-items: center;
   justify-content: space-between;
 }
-.projects .container .project:hover a > span{
+
+.projects .container .project:hover a>span {
   border-bottom: 1px solid skyblue;
   font-weight: bolder;
   color: #1c7d32;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  /* background: #3e3e3e; */
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ea1d6f;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 35px;
+  height: 4px;
+  background: #ea1d6f;
+}
+
+.app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #837a7a;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #ea1d6f;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  padding: 10PX;
+}
+
+.app-form-button:hover {
+  color: #b9134f;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
 }
