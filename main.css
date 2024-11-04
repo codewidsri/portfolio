@@ -36,6 +36,10 @@ main section {
   position: relative;
 }
 
+main section .container{
+  width: 50dvw;
+}
+
 main section.home .container a {
   color: var(--text-color);
   text-decoration: none;
@@ -92,7 +96,7 @@ main section.home .container .connect svg:hover{
 main section.home .container button.downloadbtn{
   font-size: 16px;
   font-weight: bold;
-  padding: 8px;
+  padding: 10px;
   background-color: rgb(12, 89, 120);
   border-radius: 10px;
   color: var(--text-color);
@@ -117,4 +121,83 @@ main section.home .container button.downloadbtn{
   cursor: pointer;
   padding: 5px;
   user-select: none;
+}
+
+.about .container{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.about .container h1{
+  color: var(--role-color);
+  font-size: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid yellow;
+  padding: 10px;
+}
+
+.about .container p{
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.education .container .degree,.projects .container .project{
+  margin: 20px;
+  padding: 10px;
+}
+
+.education .container .degree h1,.projects .container .project h1{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--role-color);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.education .container .degree h1 > span{
+  color: yellowgreen;
+}
+
+.education .container .degree a{
+  text-decoration: none;
+  color: rgb(201, 186, 166);
+  display: block;
+  padding: 10px;
+}
+
+.education .container .degree span,.education .container .degree p,.projects .container .project p{
+  color: #d6c1c1;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.education .container .degree:hover,.projects .container .project:hover{
+  transform: scale(1.03);
+}
+.projects .container .project ul
+{
+  padding: 10px;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+.projects .container .project ul li{
+  background-color: #312f2f;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.projects .container .project a{
+  padding: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .container .project:hover a > span{
+  border-bottom: 1px solid skyblue;
+  font-weight: bolder;
+  color: #1c7d32;
 }
